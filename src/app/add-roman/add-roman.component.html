@@ -1,0 +1,36 @@
+<div class="container">
+    <div>
+    <h2>Ajouter un Roman :</h2>
+    </div>
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >ID Roman</label>
+             <input type="text" [(ngModel)]="newRoman.idRoman"
+                      name="idRoman" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+             <label >Titre Roman</label>
+             <input type="text"[(ngModel)]= "newRoman.titreRoman"
+                      name="titreRoman" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+             <label >Prix Roman</label>
+              <input type="number" [(ngModel)]= "newRoman.prixRoman"
+                      name="prixRoman" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+              <label >Annee Edition</label>
+             <input type="date" [(ngModel)]= "newRoman.anneeEdition"
+                     name="anneeEdition" class="form-control">
+        </div>
+        <div class="mt-2">
+             <button type="submit" (click)="addRoman()" class="btn btn-success">Ajouter</button>
+                <div>
+                    <h3>
+                        {{ message }}
+
+                    </h3>
+                </div>
+        </div>
+        </form>
+        </div>
